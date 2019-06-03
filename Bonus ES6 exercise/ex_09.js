@@ -14,12 +14,12 @@ const channels = [
 let user = {
    name:'Francis',
    premium:true,
-   premiumChannels:function() {
+   premiumChannels(){
        return channels.filter((channel) => {
            return channel.premium && this.premium;
        })
    },
-   channels:function() {
+   channels(){
        return channels.filter((channel) => {
            return !channel.premium;
        })

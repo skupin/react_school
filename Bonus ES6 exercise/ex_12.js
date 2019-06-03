@@ -12,11 +12,8 @@
 
 
 const names = ["James", "Ron", "Lisa", "Tommy", "Max"];
-const randomName = (items) => {
-  return items[Math.floor(Math.random() * items.length)];
-};
-const randomNumber = (maxNumber, minNumber) => {
-  return Math.floor(Math.random() * maxNumber) + minNumber;
-};
+let randomName = items => items[Math.floor(Math.random() * items.length)]
+
+let randomNumber = (maxNumber, minNumber) => Math.floor(Math.random() * maxNumber) + minNumber
 
 console.log(`${randomName(names)} magic number is ${randomNumber(5,2)}`);

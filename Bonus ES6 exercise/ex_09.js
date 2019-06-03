@@ -11,17 +11,16 @@ const channels = [
    {name:'Cooking channel',premium:false},
    {name:'WOBI',premium:false}
 ];
-const user = {
+let user = {
    name:'Francis',
    premium:true,
-   premiumChannels:function(){
-       const $this = this;
-       return channels.filter(function(channel){
-           return channel.premium && $this.premium;
+   premiumChannels:function() {
+       return channels.filter((channel) => {
+           return channel.premium && this.premium;
        })
    },
-   channels:function(){
-       return channels.filter(function(channel){
+   channels:function() {
+       return channels.filter((channel) => {
            return !channel.premium;
        })
    }
